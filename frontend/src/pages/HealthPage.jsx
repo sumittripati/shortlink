@@ -3,7 +3,7 @@ export default function HealthPage() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/healthz")
+    fetch("https://shortlink-olh3.onrender.com/api/healthz")
       .then((r) => r.json())
       .then((d) => setData(d));
   }, []);
@@ -17,3 +17,4 @@ export default function HealthPage() {
     </div>
   );
 }
+
