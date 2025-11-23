@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavLink from "./NavLink";
+import React, { useState } from "react";
 
 export default function Header() {
+   const [login, setLogin] = useState(false);
   return (
     <header className="bg-white border-b">
       <div className="max-w-6xl mx-auto flex items-center justify-between p-4 sm:p-6">
@@ -15,9 +17,14 @@ export default function Header() {
         </Link>
         <nav className="flex items-center gap-3">
           <NavLink to="/">Dashboard</NavLink>
-          <NavLink to="/healthz">Health</NavLink>
+          {/* <NavLink to="/healthz">Health</NavLink> */}
+           <button onClick={() => setLogin(!login)}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg">
+              {login ? "Logout" : "Login"}
+           </button>
         </nav>
       </div>
     </header>
   );
 }
+
