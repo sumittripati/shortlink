@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { createShortURL, getAllLinks, getLinkByCode, deleteLink, redirectToURL, healthCheck } = require("../controllers/urlcontroller");
+const { createShortURL, getAllLinks, getLinkByCode, deleteLink, redirectToURL, healthCheck } = require("../controllers/urlController");
 
 // API routes
 router.post("/links", createShortURL);
