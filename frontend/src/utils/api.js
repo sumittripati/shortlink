@@ -1,5 +1,5 @@
 // require('dotenv').config()
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+const BASE_URL = import.meta.env.VITE_BASE_URL || "https://shortlink-olh3.onrender.com/api";
 
 // -------- GET all links --------
 export async function getAllLinks() {
@@ -29,3 +29,4 @@ export async function deleteLink(code) {
     method: "DELETE",
   });
 }
+
