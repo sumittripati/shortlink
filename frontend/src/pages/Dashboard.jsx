@@ -166,7 +166,7 @@ export default function Dashboard() {
                       </td>
                       <td className="py-2">
                         <div className="flex gap-2 items-center">
-                          <button onClick={() => copyText(`http://localhost:5000/${row.code}`)}
+                          <button onClick={() => copyText(`https://shortlink-olh3.onrender.com/${row.code}`)}
                             className="px-2 py-1 bg-green-50 text-green-700 rounded cursor-pointer">
                             Copy
                           </button>
@@ -209,3 +209,4 @@ export default function Dashboard() {
     </div>
   );
 }
+
