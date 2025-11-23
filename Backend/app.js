@@ -10,7 +10,7 @@ const urlRoutes = require('./routes/url')
 let redirectController = require('./routes/url');
 let app = express();
 app.use(cors({
-    origin: process.env.CLIENT_URL,
+    origin: "*",
     methods: ["GET", "POST", "DELETE"],
 }));
 
@@ -28,3 +28,4 @@ app.use(notFoundMiddleware);
 app.use(errorMiddleware);
 
 module.exports = app;
+
