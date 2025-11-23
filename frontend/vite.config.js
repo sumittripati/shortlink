@@ -18,14 +18,14 @@ export default defineConfig(({ mode }) => {
       proxy: {
         // Redirect Proxy
         '^/[A-Za-z0-9]{6,8}$': {
-          target: env.VITE_REDIRECT_TARGET || "http://localhost:5000",
+          target: env.VITE_REDIRECT_TARGET || "https://shortlink-olh3.onrender.com",
           changeOrigin: true,
           rewrite: path => path,
         },
 
         // API Proxy
         "/api": {
-          target: env.VITE_API_URL || "http://localhost:5000/api",
+          target: env.VITE_API_URL || "https://shortlink-olh3.onrender.com/api",
           changeOrigin: true,
           rewrite: path => path,
         }
